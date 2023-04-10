@@ -19,7 +19,7 @@ function vec3.__mul(a, b)
     if type(a) == 'number' then 
         return vec3:new(a * b.x, a * b.y, a * b.z)
     elseif type(b) == 'number' then
-        return vec:new(a.x * b, a.y * b, a.z*b)
+        return vec3:new(a.x * b, a.y * b, a.z*b)
     end
     return vec3:new(a.x*b.x, a.y*b.y, a.z*b.z)
 end
@@ -40,10 +40,8 @@ function vec3.__tostring(a)
     return "vec3(" .. a.x .. ", " .. a.y .. ', ' .. a.z .. ")"
 end
 
-setmetatable(vec3, vec3)
-
 function vec3:new(x, y, z)
     return setmetatable({x=x or 0,y=y or 0,z=z or 0}, getmetatable(self))
 end
 
-return vec3
+return setmetatable(vec3, vec3)
