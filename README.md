@@ -97,4 +97,4 @@ end
 return functionTable
 ```
 
-Now you can benefit from the vectors library from the positional data from tes3mp.
+Now you can benefit from the vectors library using the positional data from tes3mp.
