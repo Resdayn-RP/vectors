@@ -10,7 +10,7 @@ This is very early in development but it has some useful features to make life e
 
 For tes3mp, this should be required in the custiomScripts.lua, at the very top of the file.
 ```lua
-vec3 = require("custom.vector.main")
+vec3 = require("custom/vectors/main")
 ```
 
 ## Usage
