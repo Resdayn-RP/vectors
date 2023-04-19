@@ -3,6 +3,10 @@ local vec3 = {}
 
 vec3.__index = vec3
 
+function vec3:__typeof()
+    return "Vector3"
+end
+
 function vec3:__call(x, y, z)
     return setmetatable({x=x or 0,y=y or 0,z=z or 0}, getmetatable(self))
 end
@@ -28,7 +32,7 @@ function vec3.__div(a, b)
     return vec3(a.x/b, a.y/b, a.z/b)
 end
 
-function vec3.__len(a)
+function vec3.__unm(a)
     return math.sqrt(a.x^2 + a.y^2 + a.z^2)
 end
 
