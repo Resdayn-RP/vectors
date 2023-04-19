@@ -52,6 +52,7 @@ local v1, a = vec3(1, 2, 3), 3
 print(v1 / a) -- outputs: vec3(0.333, 0.666, 1)
 ```
 #### Magnitude of a vector
+Not for this section, use ```-``` instead of ```#``` as tes3mp does not support the overriding of the ```#``` operator.
 You can get the length of a vector using the ```#``` operand:
 ```lua
 local v1 = vec3(1, 2, 3)
